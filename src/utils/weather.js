@@ -99,7 +99,7 @@ export function mapWeatherCodeToIcon(weatherCode) {
  * @param {string} version - The version of the icon set to use (default: "v1").
  * @returns {string} - The URL to the weather icon.
  */
-export function getIconUrl(icon, version = "v1") {
+export function getIconUrl(icon, version = "V1") {
   const basePath = `/images/${version}_icons/color/`; // Use the "color" folder inside V1_icons
   return `${basePath}${icon}.svg`;
 }

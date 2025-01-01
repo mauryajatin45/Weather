@@ -1,20 +1,28 @@
 import { mapWeatherCodeToIcon, getIconUrl, formatTime, formatDate, getWeatherDescription } from "./utils/weather";
 
 export default function HourlyWeather({ data }) {
+  // Get the current date
+  const currentDate = formatDate(new Date());
+
+  // Filter the data to only show the current day's hourly forecast
+  const filteredData = data.filter(hour => formatDate(hour.startTime) === currentDate);
+
   return (
     <div className="hourly-weather">
+      <div>
       <h2>Hourly Forecast</h2>
-      {data.map((hour, index) => {
-        const currentDate = formatDate(hour.startTime);
-        const previousDate = index > 0 ? formatDate(data[index - 1].startTime) : null;
-        const showDate = currentDate !== previousDate;
+      </div>
+      <div className="hourly-collection">
+
+      
+      {filteredData.map((hour, index) => {
+        const currentTime = formatTime(hour.startTime);
         const iconName = mapWeatherCodeToIcon(hour.values.weatherCode);
 
         return (
           <div key={index} className="hourly-forecast">
-            {showDate && <h3 className="date">{currentDate}</h3>}
             <div className="hour">
-              <p>{formatTime(hour.startTime)}</p>
+              <p>{currentTime}</p>
               <p>{hour.values.temperature}°C</p>
               <img
                 src={getIconUrl(iconName)}
@@ -26,8 +34,11 @@ export default function HourlyWeather({ data }) {
               <p>{getWeatherDescription(hour.values.weatherCode)}</p>
             </div>
           </div>
+          
         );
+        
       })}
+      </div>
     </div>
   );
 }

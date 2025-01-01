@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Weather from './Weather'
 import './Styles.css'
-import './Search.css'
+// import './Search.css'
 
 function App() {
 

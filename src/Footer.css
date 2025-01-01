@@ -1,0 +1,53 @@
+/* Dark Mode Footer Styling */
+.footer {
+    color: #000000; /* Light text color */
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;/* Subtle border at the top */
+  }
+  
+  .footer p {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+    margin-top: 10px;
+  }
+  
+  .footer-link {
+    color: #000000; /* Default icon color */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #4caf50; /* Green color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  
+  .footer-link.github:hover {
+    color: #000000; /* White color for GitHub hover */
+  }
+  
+  .footer-link.linkedin:hover {
+    color: #0a66c2; /* LinkedIn blue color on hover */
+  }
+  
+  .footer-link svg {
+    vertical-align: middle; /* Align icons properly */
+  }
+  
+  /* Responsive Design for Footer */
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 0.9rem; /* Slightly smaller font size on mobile */
+      padding: 15px;
+    }
+    
+    .footer-links {
+      gap: 15px; /* Less gap on smaller screens */
+    }
+  }
+  

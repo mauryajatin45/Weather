@@ -13,7 +13,7 @@ export default function CurrentWeather({ data }) {
         alt={getWeatherDescription(data.weatherCode)}
         onError={(e) => {
           e.target.onerror = null; // Prevent infinite fallback loop
-          e.target.src = "/images/default.png"; // Fallback image
+          e.target.src = "/images/default.svg"; // Fallback image
         }}
       />
     </div>
