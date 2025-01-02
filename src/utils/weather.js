@@ -86,7 +86,7 @@ export function mapWeatherCodeToIcon(weatherCode) {
     6200: "freezing_rain_light",
     6201: "freezing_rain_heavy",
     7000: "ice_pellets",
-    7101: "ice_pellets_heavy",
+    7101: "ice_pellets_heavy",  
     7102: "ice_pellets_light",
     8000: "tstorm",
   };
