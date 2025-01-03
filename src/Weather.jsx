@@ -83,19 +83,20 @@ export default function Weather() {
 
   return (
     <div className="weather-container">
-      <div className="searchDiv">
-        <div className="searchText">Weather App</div>
-        <div className="search">
-          <input
-            placeholder="Search for a location..."
-            type="text"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-          />
-          <button onClick={handleSearch}>Go</button>
-        </div>
-        <div className="searchDesc">build with React</div>
-      </div>
+     <div className="searchDiv">
+  <div className="searchText">Weather App</div>
+  <div className="search">
+    <input
+      placeholder="Search for a location..."
+      type="text"
+      value={location}
+      onChange={(e) => setLocation(e.target.value)}
+    />
+    <button onClick={handleSearch}>Go</button>
+  </div>
+  <div className="searchDesc">Built with React</div>
+</div>
+
 
       {error && <div className="error">{error}</div>}
 
